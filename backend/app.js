@@ -13,7 +13,6 @@ mongoose.connect("mongodb+srv://maja:maja123@cluster0.b8z5q.mongodb.net/node-ang
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-
 app.use((req,res,next)=>{
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

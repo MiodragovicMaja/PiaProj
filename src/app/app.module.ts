@@ -15,12 +15,18 @@ import {MatToolbarModule} from "@angular/material/toolbar"
 import {MatExpansionModule} from "@angular/material/expansion"
 
 import {HttpClientModule} from "@angular/common/http";
+import { RegistrationComponent } from './components/registration/registration.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     PostCreateComponent,
     HeaderComponent,
-    PostListComponent
+    PostListComponent,
+    RegistrationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatCardModule,
     MatToolbarModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
