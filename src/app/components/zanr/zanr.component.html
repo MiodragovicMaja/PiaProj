@@ -1,0 +1,20 @@
+<div class=background>
+  <div class="container">
+        <div class="innerContainer">
+            <div class="row">
+                <form class="clr-form" [formGroup]="zanrForm">
+                    <div class="userInfo">
+                        <span class="userLabel">Name</span>
+                        <input type="text" class="userInput" name="name" placeholder="name"
+                            formControlName="name" autofocus="autofocus" required />
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-block btn-md btn-primary button" (click)="newGenre()">
+                          Add a new genre
+                      </button>
+                  </div>
+                </form>
+            </div>
+        </div>
+  </div>
+  </div>

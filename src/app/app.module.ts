@@ -18,6 +18,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminComponent } from './components/admin/admin.component';
+import { ClarityModule } from '@clr/angular';
+import { GuestComponent } from './components/guest/guest.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
+import { BookComponent } from './components/book/book.component';
+import { NewBookComponent } from './components/new-book/new-book.component';
+import { BookPageComponent } from './components/book-page/book-page.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component';
+import { ZanrComponent } from './components/zanr/zanr.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +37,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     PostListComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    GuestComponent,
+    ProfileComponent,
+    UserDashboardComponent,
+    BookComponent,
+    NewBookComponent,
+    BookPageComponent,
+    ChangePasswordComponent,
+    ZanrComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +59,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     MatExpansionModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ClarityModule
   ],
   providers: [],
   bootstrap: [AppComponent]

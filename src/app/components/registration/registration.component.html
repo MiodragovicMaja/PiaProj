@@ -1,0 +1,76 @@
+<div class=background>
+<div class="container">
+      <div class="innerContainer">
+          <div class="row">
+              <form class="clr-form" [formGroup]="registrationForm">
+                  <div class="userInfo">
+                      <span class="userLabel">First Name</span>
+                      <input type="text" class="userInput" name="firstame" placeholder="first name"
+                          formControlName="firstname" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel">Last Name</span>
+                      <input type="text" class="userInput" name="lastname" placeholder="last name"
+                          formControlName="lastname" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel">Email Address</span>
+                      <input type="email" class="userInput" name="email" placeholder="email address"
+                          formControlName="email" autofocus="autofocus" required />
+                  </div>
+
+                  <div class="userInfo">
+                      <span class="userLabel">Birth date</span>
+                      <input type="date" class="userInput" name="date" placeholder="birth date"
+                          formControlName="date" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel"> Place</span>
+                      <input type="text" class="userInput" name="Place" placeholder="birth place"
+                          formControlName="place" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel">Username</span>
+                      <input type="text" class="userInput" name="username" placeholder="username"
+                          formControlName="username" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel">Password</span>
+                      <input type="password" class="userInput" name="password" placeholder="password"
+                          formControlName="password" required />
+                  </div>
+                  <div class="userInfo">
+                      <span class="userLabel">Confirm</span>
+                      <input type="password" class="userInput" name="cPassword" placeholder="password"
+                          formControlName="cPassword" required />
+                  </div>
+                  <div *ngIf="showPasswordErrorMessage" class="error active">
+                      Passwords don't match!
+                  </div>
+                  <div *ngIf="showPasswordPatternErrorMessage" class="error active">
+                      Passwords must have minimum 7 characters, at least one capital letter, one
+                      number and one special character, and must begin with a letter!
+                  </div>
+
+                  <div>
+                      <button type="submit" class="btn btn-block btn-md btn-primary button" (click)="registerUser()">
+                          Register
+                      </button>
+                  </div>
+                  <div *ngIf="showServerErrorMessage" class="error active">
+                      Server error, read in console
+                  </div>
+                  <div *ngIf="showSuccsessfulRequest" class="success active">
+                    Successfully sent registration request!
+                </div>
+                <div class="row">
+                  <label style="color: grey; text-align: right ;padding-top:33px;
+                         padding-left: 45px; vertical-align: middle;"> Profilna fotografija : </label>
+                  <input #imageInput type="file"accept="image/png, image/jpeg, image/jpg" style="margin-left: 0;"
+                    (change)="checkPhoto($event)" multiple="false">
+                </div>
+              </form>
+          </div>
+      </div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+<h3 class="title" style="margin-top: 30px">Book</h3>
+<div
+  class="requestList"
+  style="margin-top: 20px; height: 150px; overflow-y: scroll"
+>
+  <div class="userInfo">
+    <span class="userLabel">Title:</span>
+    <span class="userInput"> {{ book.title }} </span>
+  </div>
+  <div class="userInfo" *ngFor="let author of book.authors">
+    <span class="userLabel">Authors:</span>
+    <span class="userInput"> {{ author }} </span>
+  </div>
+  <div class="userInfo" *ngFor="let genre of book.genres">
+    <span class="userLabel">Genres:</span>
+    <span class="userInput"> {{ genre }} </span>
+  </div>
+  <div class="userInfo">
+    <span class="userLabel">Date:</span>
+    <span class="userInput"> {{ book.date }} </span>
+  </div>
+  <div class="userInfo">
+    <span class="userLabel">Description:</span>
+    <span class="userInput"> {{ book.description }} </span>
+  </div>
+  <div class="userInfo" *ngFor="let comment of book.nizKomentara">
+    <span class="userLabel">User:</span>
+    <div *ngIf="service.getUserType() === 'regUser' || service.getUserType() === 'moderator'">
+    <a class="userInput" routerLink="/profile/{{comment.username}}"> {{ comment.username }} </a>
+    </div>
+    <span class="userLabel">Comment</span>
+    <p>{{comment.tekst}}</p>
+  </div>
+  <div class="userInfo" *ngIf="!imaKomentar()&&tip=='guest'">
+    <div class="btn-group btn-primary groupBtn">
+      <input type="text" [(ngModel)]="commnetText">
+      <button class="btn btn-success button" (click)="comment()">
+        Comment
+      </button>
+    </div>
+  </div>
+

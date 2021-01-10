@@ -1,0 +1,41 @@
+<div class=background>
+  <div class="container">
+        <div class="innerContainer">
+            <div class="row">
+                <form class="clr-form" [formGroup]="registrationForm">
+                    <div class="userInfo">
+                        <span class="userLabel">Title</span>
+                        <input type="text" class="userInput" name="title" placeholder="title"
+                            formControlName="title" autofocus="autofocus" required />
+                    </div>
+                    <div class="userInfo">
+                        <span class="userLabel">Author</span>
+                        <input type="email" class="userInput" name="authors" placeholder="author"
+                            formControlName="authors" autofocus="autofocus" required />
+                    </div>
+
+                    <div class="userInfo">
+                        <span class="userLabel">Date</span>
+                        <input type="date" class="userInput" name="date" placeholder="birth date"
+                            formControlName="date" autofocus="autofocus" required />
+                    </div>
+                    <div class="userInfo">
+                      <span class="userLabel"> Genre</span>
+                      <input type="text" class="userInput" name="genres" placeholder="genre"
+                          formControlName="genres" autofocus="autofocus" required />
+                  </div>
+                  <div class="userInfo">
+                    <span class="userLabel"> Description</span>
+                    <input type="text" class="userInput" name="description" placeholder="description"
+                        formControlName="description" autofocus="autofocus" required />
+                </div>
+                    <div>
+                        <button type="submit" class="btn btn-block btn-md btn-primary button" (click)="newBook()">
+                            New Book
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+  </div>
+  </div>

@@ -1,4 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  }
+
+
+
+  .background {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/images/biblioteka.jpg");
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+  }
+
+  .backgroundLogin {
+    height: 100%;
+    width: 100%;
+    background-image: url("./assets/images/knjige.jpg");
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+  }
+  guestcontainer{
+    background-image: url("./assets/images/knjige.jpg");
+
+
+  }

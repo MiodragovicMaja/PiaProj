@@ -1,0 +1,118 @@
+<h3 class="title">Requests</h3>
+<div class="requestList" *ngFor="let request of registrationRequests">
+  <div class="userInfo">
+      <span class="userLabel">First Name:</span>
+      <span class="userInput"> {{ request.firstname }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Last Name:</span>
+      <span class="userInput"> {{ request.lastname }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Username:</span>
+      <span class="userInput"> {{ request.username }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Email:</span>
+      <span class="userInput"> {{ request.email }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Birth Place:</span>
+      <span class="userInput"> {{ request.place }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Birth Date:</span>
+      <span class="userInput"> {{ request.date }} </span>
+  </div>
+  <div class="userInfo">
+      <div class="btn-group btn-primary groupBtn">
+          <button class="btn btn-success button"
+              (click)="acceptRequest(request)">Accept</button>
+          <button class="btn btn-danger button"
+              (click)="deleteRegistrationRequest(request)">Reject</button>
+      </div>
+  </div>
+</div>
+<td></td>
+
+
+<h3 class="title">Users</h3>
+<div class="userList" *ngFor="let user of users">
+  <div class="userInfo">
+      <span class="userLabel">First Name:</span>
+      <span class="userInput"> {{ user.firstname }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Last Name:</span>
+      <span class="userInput"> {{ user.lastname }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Username:</span>
+      <span class="userInput"> {{ user.username }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Email:</span>
+      <span class="userInput"> {{ user.email }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Birth Place:</span>
+      <span class="userInput"> {{ user.place }} </span>
+  </div>
+  <div class="userInfo">
+      <span class="userLabel">Birth Date:</span>
+      <span class="userInput"> {{ user.date }} </span>
+  </div>
+  <div class="userInfo">
+    <span class="userLabel">Type:</span>
+    <span class="userInput"> {{ user.userType }} </span>
+</div>
+  <div class="userInfo">
+      <div class="btn-group btn-primary groupBtn">
+          <button class="btn btn-success button"
+              (click)="changeUserType(user)">Change user type</button>
+      </div>
+  </div>
+</div>
+
+<h3 class="title">Book requests</h3>
+<div class="requestList" *ngFor="let bookRequest of bookRequests">
+  <div class="userInfo">
+    <span class="userLabel">Title:</span>
+    <span class="userInput"> {{ bookRequest.title }} </span>
+  </div>
+  <div class="userInfo" *ngFor="let author of bookRequest.authors">
+    <span class="userLabel">Authors:</span>
+    <span class="userInput"> {{ author }} </span>
+  </div>
+  <div class="userInfo" *ngFor="let genre of bookRequest.genres">
+    <span class="userLabel">Genres:</span>
+    <span class="userInput"> {{ genre }} </span>
+  </div>
+  <div class="userInfo">
+    <span class="userLabel">Date:</span>
+    <span class="userInput"> {{ bookRequest.date }} </span>
+  </div>
+  <div class="userInfo">
+      <div class="btn-group btn-primary groupBtn">
+          <button class="btn btn-success button"
+              (click)="acceptBookRequest(bookRequest)">Accept</button>
+          <button class="btn btn-danger button"
+              (click)="deleteBookRequest(bookRequest)">Reject</button>
+      </div>
+  </div>
+</div>
+<td></td>
+
+
+<mat-toolbar color="primary">
+  <span><a mat=button routerLink='/book' routerLinkActive="mat-accent">ALL BOOKS</a></span>
+  <span class="spacer"></span>
+  <ul>
+    <li>
+      <a mat=button routerLink='/newbook' routerLinkActive="mat-accent">ADD A BOOK</a>
+    </li>
+    <li>
+      <a mat=button routerLink='/zanr' routerLinkActive="mat-accent">ADD A GENRE</a>
+    </li>
+  </ul>
+</mat-toolbar>

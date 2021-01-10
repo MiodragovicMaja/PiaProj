@@ -10,6 +10,8 @@ import { KnjizaraService } from 'src/app/service/knjizara.service';
 })
 export class LoginComponent {
 
+
+
   loginForm: FormGroup = new FormGroup({
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required)
@@ -18,7 +20,13 @@ export class LoginComponent {
   showErrorMessage = false;
   showServerErrorMessage = false;
 
-  constructor(private router: Router, private service: KnjizaraService) {}
+
+
+  constructor(private router: Router, private service: KnjizaraService) {
+
+  }
+
+
 
   login(): void {
     if (this.loginForm.invalid) {
@@ -28,11 +36,13 @@ export class LoginComponent {
     const username = this.loginForm.value.username;
 
     this.service.login(this.loginForm.value).subscribe(data => {
-      this.service.setCredentials(username, data.userType, data.token, data.id);
+
+      this.service.setCredentials(username, data.userType);
       this.service.nextPage();
       this.showErrorMessage = false;
     },
       err => {
+        console.log(err.message);
         this.showErrorMessage = true;
       });
 
@@ -43,4 +53,6 @@ export class LoginComponent {
   register(): void {
     this.router.navigate(['/registration']);
   }
+
+
 }

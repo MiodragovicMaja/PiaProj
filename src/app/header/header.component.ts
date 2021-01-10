@@ -1,4 +1,5 @@
 import {Component} from '@angular/core'
+import { KnjizaraService } from '../service/knjizara.service';
 
 
 @Component({
@@ -7,4 +8,9 @@ import {Component} from '@angular/core'
   styleUrls: ['./header.component.css']
 
 })
-export class HeaderComponent{}
+export class HeaderComponent{
+
+
+  constructor(public service: KnjizaraService) { }
+
+}
