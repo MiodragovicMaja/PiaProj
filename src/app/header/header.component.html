@@ -1,8 +1,34 @@
+<mat-toolbar color="warning">
+  <!--<span><a routerLink='/'>RTI</a></span> -->
+  <div class= "container" style="width: 100%;">
+  <div class= "row" style="justify-content:center;text-align: center;width:100%">
+    <div class = "col-md-8 col-sm-12 col-12" style="justify-content:center;text-align: left;" >
+
+      <a mat=button routerLink='/' routerLinkActive="mat-accent" style="color:black">HOME</a>
+      &nbsp;&nbsp;
+
+      <a mat=button routerLink='/registration' routerLinkActive="mat-accent" style="color:black">REGISTER</a>
+
+    </div>
+    <div class = "col-md-4 col-sm-12 col-12 desno">
+      <a mat=button routerLink='/login' routerLinkActive="mat-accent" style="color:black">LOG IN</a>
+      &nbsp;&nbsp;
+      <a mat=button (click)="service.logOutUser()" routerLinkActive="mat-accent">LOG OUT</a>
+    </div>
+  </div>
+  </div>
+
+  </mat-toolbar>
+
+
+<!--
 <mat-toolbar color="primary">
+
+<div class="row" style="width:100">
+
 <span><a routerLink='/'>Home</a></span>
 
 <span class="spacer"></span>
-
 <ul>
 
   <li>
@@ -16,6 +42,7 @@
     <a mat=button (click)="service.logOutUser()">LOG OUT</a>
   </li>
 </ul>
+</div>
 
 
-</mat-toolbar>
+</mat-toolbar> -->

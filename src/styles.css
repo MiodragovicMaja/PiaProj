@@ -12,12 +12,14 @@ body {
   .background {
     height: 100%;
     width: 100%;
-    background-image: url("./assets/images/biblioteka.jpg");
+    background-image: url("./assets/images/background.jpg");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+   /* background-color: #00ce2d;
+    background-blend-mode: lighten; */
     position: fixed;
   }
 
@@ -32,6 +34,7 @@ body {
     background-attachment: fixed;
     position: fixed;
   }
+
   guestcontainer{
     background-image: url("./assets/images/knjige.jpg");
 
